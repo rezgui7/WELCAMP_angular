@@ -1,0 +1,92 @@
+<div class="container mt-5">
+    <div class="card p-2">
+
+        <div class="row">
+            <div class="col-6">
+
+
+                
+                <form #toolForm="ngForm" (ngSubmit)="addTool(toolForm)">
+                    <div class="form-outline mb-4">
+                        <input class="form-control" id="form1Example1" [(ngModel)]="tool.toolName" name="toolName" />
+                        <label class="form-label" for="form1Example1">Tool Name</label>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input class="form-control" id="form1Example2" [(ngModel)]="tool.description" name="description"/>
+                        <label class="form-label" for="form1Example1">Description</label>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input class="form-control" id="form1Example3" [(ngModel)]="tool.characteristic" name="characteristic"/>
+                        <label class="form-label" for="form1Example1">Characteristic</label>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input class="form-control" id="form1Example4" [(ngModel)]="tool.brand" name="brand"/>
+                        <label class="form-label" for="form1Example1">Brand</label>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input class="form-control" id="form1Example5" [(ngModel)]="tool.price" name="price"/>
+                        <label class="form-label" for="form1Example1">Price</label>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input class="form-control" id="form1Example6" [(ngModel)]="tool.typeCart" name="typeCart"/>
+                        <label class="form-label" for="form1Example1">TypeCart</label>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input class="form-control" id="form1Example7" [(ngModel)]="tool.RentPeriod" name="RentPeriod"/>
+                        <label class="form-label" for="form1Example1">Rent period</label>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input class="form-control" id="form1Example8" [(ngModel)]="tool.weight" name="weight"/>
+                        <label class="form-label" for="form1Example1">weight</label>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input class="form-control" id="form1Example9" [(ngModel)]="tool.barCode" name="barCode"/>
+                        <label class="form-label" for="form1Example9">Bar code</label>
+                    </div>
+
+                    <div align="end">
+                        <button type="button" class="btn btn-outline-dark">Clear</button>
+                        <button type="submit" class="btn btn-outline-success">Add Product</button>
+                    </div>
+
+                </form>
+
+
+            </div>
+            <div class="col-6">
+                <div>
+                    
+                    <div class="dropzone" appDrag (files)="fileDropped($event)">
+                        <div class="text-wrapper">
+                            <div class="centred">Drag your file or <a class="browse-button" (click)="selectFile.click()">browse</a> a file</div>
+                            
+                        </div>
+                    </div>
+                    <input style="display: none;" type="file" value="select" #selectFile
+                    (change)="onFileSelected($event)">
+                </div>
+                <div class="mt-5">
+                    <div class="row">
+                        <mat-grid-list cols="1" rowHeight="1:1">
+                            <mat-grid-tile *ngFor="let file of tool.images; let i = index;">
+                                <div style="position: relative;">
+                                    <span class="btn-remove-image" (click)="removeImages(i)">x</span>
+                                    <img [src]="file.url" width="100px" height="100px">
+                                </div>
+                            </mat-grid-tile>
+                        </mat-grid-list>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

@@ -1,0 +1,316 @@
+
+
+    <!--
+      - BANNER
+    -->
+
+    <div class="banner">
+
+      <div class="container">
+
+        <div class="slider-container has-scrollbar">
+
+          <div class="slider-item">
+
+            <img src="/assets/front/img/decathlonBanner.jpg" alt="women's latest fashion sale" class="banner-img">
+
+            <div class="banner-content">
+
+              <p class="banner-subtitle">Trending item</p>
+
+              <h2 class="banner-title">Tent's latest sale</h2>
+
+              <p class="banner-text">
+                starting at &dollar; <b>20</b>.00
+              </p>
+
+              <a href="#" class="banner-btn">Shop now</a>
+
+            </div>
+
+          </div>
+
+          <div class="slider-item">
+
+            <img src="/assets/front/img/banner3.webp" alt="modern sunglasses" class="banner-img">
+
+            <div class="banner-content">
+
+              <p class="banner-subtitle">Trending accessories</p>
+
+              <h2 class="banner-title">Check our latest Promotion</h2>
+
+              <p class="banner-text">
+                starting at &dollar; <b>15</b>.00
+              </p>
+
+              <a href="#" class="banner-btn">Shop now</a>
+
+            </div>
+
+          </div>
+
+          <div class="slider-item">
+
+            <img src="/assets/front/img/banner2.jpg" alt="new fashion summer sale" class="banner-img">
+
+            <div class="banner-content">
+
+              <p class="banner-subtitle">Sale Offer</p>
+
+              <h2 class="banner-title">New summer sale</h2>
+
+              <p class="banner-text">
+                starting at &dollar; <b>29</b>.99
+              </p>
+
+              <a href="#" class="banner-btn">Shop now</a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    
+
+    <!--
+      - BANNER END
+    -->
+
+    <div class="product-container">
+
+      <div class="containerr">
+    
+ <!--
+          - SIDEBAR
+        -->
+
+        <div class="sidebar  has-scrollbar"  >
+
+          <div class="sidebar-category"style="border: 2px solid  gainsboro; padding: 10px;border-radius: 20px;">
+
+            <div class="sidebar-top">
+              <h2 class="sidebar-title">Category</h2>
+
+              
+            </div>
+            <section >
+              
+
+            <ul class="sidebar-menu-category-list">
+
+              <li class="sidebar-menu-category" *ngFor="let c of staticCategories">
+
+
+                  <div class="menu-title-flex">
+                    <input
+                    class="form-check-input me-1"
+                    type="{{c.type}}"
+                    [(ngModel)]="selectedCategories" [value]="c.name" (change)="updateSelectedCategories2($event, c.name)"
+                  />
+                    {{c.name}}
+                  </div>
+
+                  <div>
+                    
+                  </div>
+              </li>
+            </ul>
+          </section>
+
+          </div>
+
+
+        </div>
+
+
+
+        <div class="product-box">
+
+          <!--
+            - PRODUCT MINIMAL
+          -->
+
+          <div class="product-minimal">
+
+            <div class="product-showcase">
+
+              <h2 class="title"style="border-bottom: 2px solid black;">New Arrivals</h2>
+
+              <div class="showcase-wrapper has-scrollbar">
+
+                <div class="showcase-container">
+
+                  <div class="showcase">
+                    <section *ngFor="let p of listNewArrival">
+
+
+                    <a href="#" class="showcase-img-box">
+                      
+                      <img [src]="p.images[0].url" alt="ccccc" width="70" class="showcase-img">
+                      
+                    </a>
+
+                    <div class="showcase-content">
+
+                      <a href="#">
+                        <h4 class="showcase-title">{{p.toolName}}</h4>
+                      </a>
+
+                      <a href="#" class="showcase-category">{{p.toolName}}</a>
+
+                      <div class="price-box">
+                        <p class="price">${{p.price}}</p>
+                      </div>
+
+                    </div>
+                    </section>
+                  </div>
+             
+               
+                  
+                </div>
+
+                
+
+              </div>
+
+            </div>
+
+            <div class="product-showcase">
+            
+              <h2 class="title"style="border-bottom: 2px solid black;">Trending</h2>
+            
+              <div class="showcase-wrapper  has-scrollbar">
+            
+                <div class="showcase-container">
+            
+                  <div class="showcase">
+                    <section *ngFor="let p of listTrend">
+            
+                    <a href="#" class="showcase-img-box">
+                      <img [src]="p.images[0].url" alt="bbbb" class="showcase-img"
+                        width="70">
+                    </a>
+            
+                    <div class="showcase-content">
+            
+                      <a href="#">
+                        <h4 class="showcase-title">bbbbbbbb</h4>
+                      </a>
+            
+                      <a href="#" class="showcase-category">{{p.toolName}}</a>
+            
+                      <div class="price-box">
+                        <p class="price">${{p.price}}</p>
+                      </div>
+            
+                    </div>
+                    </section>
+                  </div>
+                </div>
+           
+              </div>
+            
+            </div>
+
+            <div class="product-showcase">
+            
+              <h2 class="title"style="border-bottom: 2px solid black;">In Promotion</h2>
+            
+              <div class="showcase-wrapper  has-scrollbar">
+            
+                <div class="showcase-container">
+            
+                  <div class="showcase">
+                    <section *ngFor="let p of listInPromotion">
+            
+                    <a href="#" class="showcase-img-box">
+                      <img [src]="p.images[0].url" alt="....." class="showcase-img"
+                        width="70">
+                    </a>
+            
+                    <div class="showcase-content">
+            
+                      <a href="#">
+                        <h4 class="showcase-title">aaaaaaa</h4>
+                      </a>
+            
+                      <a href="#" class="showcase-category">{{p.toolName}}</a>
+            
+                      <div class="price-box">
+                        <p class="price">${{p.price}}</p>
+                      </div>
+            
+                    </div>
+                    </section>
+                  </div>
+            
+                </div>
+            
+            
+              </div>
+            
+            </div>
+
+          </div>
+          <!--
+            - PRODUCT GRID
+          -->
+
+          <div class="product-main">
+
+            <h2 class="title">Products</h2>
+
+            <div class="product-grid">
+
+              
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <section *ngFor="let p of listTools">
+                    <div class="card" style="width: 17rem;">
+                        <img [src]="p.images[0].url" class="card-img-top" alt="...">                        
+                        <div class="card-body">
+                          <h5 class="card-title">{{p.toolName}}</h5>
+                          <h5 class="card-title">{{p.description}}</h5>
+                          <p class="card-text">{{p.price}}</p>
+                          <a class="btn btn-primary" (click)="ShowDetails(p.idToolOffer)">More Details</a>
+                        </div>
+                      </div>
+                   
+                </section>
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; height: 20vh; padding-bottom: 100px;" >
+                  
+
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                      <li class="page-item"><button class="btn btn-outline-primary" [disabled]="pageNumber == 0" (click)="loadLessProduct()" >Previous</button></li>
+                      <li class="page-item"><button class="btn btn-outline-primary" [disabled]="showLoadButton<6" (click)="loadMoreProduct()" >Next</button></li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="mt-5" >
+    
+                </div>
+            </div>
+            
+
+          </div>
+
+          
+
+          
+        </div>
+
+        
+      
+
+    </div>
+
+
+	
+

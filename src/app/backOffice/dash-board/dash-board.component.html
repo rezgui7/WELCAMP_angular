@@ -1,0 +1,48 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+    <p>Last updated</p>
+
+    <table class="table table-striped">
+	<thead>
+		<tr>
+			<th scope="col">ID</th>
+			<th scope="col">NAME</th>
+			<th scope="col">Destcription</th>
+			<th scope="col">Characteristic</th>
+            <th scope="col">Brand</th>
+            <th scope="col">Barcode</th>
+            <th scope="col">Price</th>
+            <th scope="col">Weight</th>
+            <th scope="col">Actions</th>
+
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let t of listTools">
+			<th scope="row">{{ t.idToolOffer}}</th>
+			<td>
+				<img
+					[src]="t.images[0].url"
+					class="me-2"
+					style="width: 20px"
+				/>
+				{{ t.toolName }}
+			</td>
+			<td>{{ t.description }}</td>
+			<td>{{ t.characteristic}}</td>
+            <td>{{ t.brand}}</td>
+            <td>{{ t.barCode}}</td>
+            <td>{{ t.price}}</td>
+            <td>{{ t.weight}}</td>
+            <td>
+                <a class="btn btn-primary" (click)="ShowDetails(t.idToolOffer)">Apply promotion</a>
+            </td>
+		</tr>
+	</tbody>
+</table>
+</div>
