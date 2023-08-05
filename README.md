@@ -28,8 +28,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Demo
 Home Page :
+![Screenshot (82)](https://github.com/rezgui7/Welcamp_Angular/assets/92729636/70dfdec9-935d-445b-ba05-4612a3f1e2fe)
+![Screenshot (81)](https://github.com/rezgui7/Welcamp_Angular/assets/92729636/a4f940aa-d53f-4e4e-9878-39b0fa63004c)
 
-![Uploading Screenshot (82).png…]()
+Cart :
+![Screenshot (83)](https://github.com/rezgui7/Welcamp_Angular/assets/92729636/52d5d65d-0ea9-497f-84b4-0e62136ec98f)
 
 
 
