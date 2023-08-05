@@ -31,9 +31,5 @@ Home Page :
 
 ![Uploading Screenshot (82).png…]()
 
-![Uploading Screenshot (81).png…]()
 
-Cart :
-
-![Uploading Screenshot (83).png…]()
 
